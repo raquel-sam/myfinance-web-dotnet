@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using myfinance_web_dotnet.Infrastructure;
 using myfinance_web_dotnet.Models;
 
 namespace myfinance_web_dotnet.Controllers;
@@ -7,14 +8,20 @@ namespace myfinance_web_dotnet.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private MyFinanceDbContext _myFinanceDbContext;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(
+        ILogger<HomeController> logger,
+        MyFinanceDbContext myFinanceDbContext)
     {
         _logger = logger;
+        _myFinanceDbContext = myFinanceDbContext;
     }
 
     public IActionResult Index()
     {
+        var teste = _myFinanceDbContext.PlanoContas.FirstOrDefault();
+        ViewBag.TESTE = teste.Nome;
         return View();
     }
 
