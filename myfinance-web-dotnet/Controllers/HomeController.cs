@@ -20,7 +20,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var teste = _myFinanceDbContext.PlanoContas.FirstOrDefault();
+        var teste = _myFinanceDbContext.PlanoConta.FirstOrDefault();
         ViewBag.TESTE = teste.Nome;
         return View();
     }
