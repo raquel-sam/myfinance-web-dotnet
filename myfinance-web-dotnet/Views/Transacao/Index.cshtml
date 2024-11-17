@@ -1,0 +1,39 @@
+﻿@using myfinance_web_dotnet.Domain
+@{
+    ViewData["Title"] = "Transações Financeiras";
+}
+
+<h1>Transacao</h1>
+<br />
+<a type="button" class="btn btn-primary">Registrar Transação</a>
+<br /><br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Data</th>
+        <th>valor</th>
+        <th>Histórico</th>
+        <th>Tipo</th>
+        <th>PlanoConta</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+    @{
+        foreach (var item in (List<Transacao>)ViewBag.ListaTransacao)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Data</td>
+                <td>@item.Valor</td>
+                <td>@item.Historico</td>
+                <td>@item.Tipo</td>
+                <td>@item.PlanoContaId</td>
+                <td><button type="button" class="btn btn-warning">Editar</button></td>
+                <td><button type="button" class="btn btn-danger">Excluir</button></td>
+            </tr>
+        }
+    }
+
+    </tr>
+
+</table>
