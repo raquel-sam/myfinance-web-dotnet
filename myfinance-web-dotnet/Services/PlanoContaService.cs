@@ -16,7 +16,11 @@ namespace myfinance_web_dotnet.Services
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            var item = RetornarRegistro(id);
+            _myFinanceDbContext.Attach(item);
+            _myFinanceDbContext.Remove(item);
+            _myFinanceDbContext.SaveChanges();
+
         }
 
         public List<PlanoConta> ListarRegistros()
@@ -27,7 +31,8 @@ namespace myfinance_web_dotnet.Services
 
         public PlanoConta RetornarRegistro(int id)
         {
-            return new PlanoConta();
+            var item = _myFinanceDbContext.PlanoConta.Where(x => x.Id == id).First();
+            return item;
         }
 
         public void Salvar(PlanoConta item)

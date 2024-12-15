@@ -23,23 +23,54 @@ namespace myfinance_web_dotnet.Controllers
             return View();
         }
 
-        [HttpGet]
         [HttpPost]
+        [HttpGet]
         [Route("Cadastro")]
-        public IActionResult Cadastro(PlanoContaModel? model)
+        [Route("Cadastro/{id}")]
+        public IActionResult Cadastro(PlanoContaModel? model, int? id)
         {
-            if(model != null && ModelState.IsValid)
+            if(id != null  && !ModelState.IsValid) // carregar registro em tela
             {
-                var planoConta = new PlanoConta
-                {
-                    Id = model.Id,
-                    Nome = model.Nome,
-                    Tipo = model.Tipo
-                };
-
-                _planoContaService.Salvar(planoConta);
+            var registro = _planoContaService.RetornarRegistro((int)id);
+            
+            var PlanoContaModel = new PlanoContaModel()
+            {
+                Id = registro.Id,
+                Nome = registro.Nome,
+                Tipo = registro.Tipo
+            };
+            return View(PlanoContaModel);
             }
-            return View();
+            else if(model != null && ModelState.IsValid)
+            {
+                        
+                    var planoConta = new PlanoConta
+                    {
+                        Id = model.Id,
+                        Nome = model.Nome,
+                        Tipo = model.Tipo
+                    };
+
+                    _planoContaService.Salvar(planoConta);
+
+                    return RedirectToAction("Index");
+ 
+            }
+                else
+                {
+                return View();
+                }
+                
         }
+        [HttpGet]
+        [Route("Excluir/{id}")]
+        public IActionResult Excluir(int id)
+        {
+            _planoContaService.Excluir(id);
+            return RedirectToAction("Index");
+        }
+
+
     }
+
 }
