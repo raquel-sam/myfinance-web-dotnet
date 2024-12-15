@@ -1,12 +1,12 @@
 # myfinance-web-dotnet
-Sistema de Finanças Pessoais
+Sistema de Finanças Pessoais - Projeto aula Práticas de Implementação e Evolução de Software - Curso Engenharia de Software Puc Minas - Oferta 7 - 2024
 
-# Proposta
+## Proposta
 
-Vamos criar uma aplicação web para que famílias possam registrar suas receitas e despesas para análise de seus gastos e consequentemente um melhor planejamento financeiro. Esta aplicação deve permitir que o usuário monte uma espécie de Plano de Contas para categorizar todas as Transações realizadas. É importante que se tenha também relatórios de despesas por
+Criar uma aplicação web para que famílias possam registrar suas receitas e despesas para análise de seus gastos e consequentemente um melhor planejamento financeiro. Esta aplicação deve permitir que o usuário monte uma espécie de Plano de Contas para categorizar todas as Transações realizadas. É importante que se tenha também relatórios de despesas por
 período, permitindo uma análise detalhada das finanças.
 
-# Entrega
+## Entrega
 Tela de Plano contas, com a função de visualização dos dados, criação de novo registro, edição exclusão.
 Tela de Transação, somente com a função de visualização dos dados. Os demais itens, como a edição e exclusão da tela de transação e relatórios não foram criados.
 
@@ -16,10 +16,10 @@ Tela de Transação, somente com a função de visualização dos dados. Os dema
 
 ## Ferramentas
 
--ASP.NET MVC (dotnet version 8.0.404)
--VSCode
--Banco de dados MySQL Server Studio
--git version 2.47.1.windows.1
+1 ASP.NET MVC (Dotnet version 8.0.404)
+2 VSCode
+3 Banco de dados MySQL Server Studio
+4 Git version 2.47.1.windows.1
 
 
 ## Como configurar o projeto
@@ -31,7 +31,7 @@ Para realizar a inicialização do projeto, siga os seguintes procedimentos:
 
 3 Executar o script de criação do banco de dados no MySql Server Management Studio (myfinance-web-dotnet\Docs\myfinance.sql);
 
-4 No arquivo MyFinanceDbContext.cs, o nome do server na variável abaixo (@"Server=('NOME_SERVER')), deve ser alterado conforme está na configuração do seu MySQL Server Management Studio 
+4 No arquivo MyFinanceDbContext.cs, configurar o seu servidor na variável (@"Server=('NOME_SERVER'))
 
 ```var connectionString = @"Server=('NOME_SERVER');Database=myfinance;Trusted_Connection=True;TrustServerCertificate=True";```
 
