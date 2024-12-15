@@ -17,15 +17,19 @@ Tela de Transação, somente com a função de visualização dos dados. Os dema
 ## Ferramentas
 
 1 ASP.NET MVC (Dotnet version 8.0.404)
+
 2 VSCode
+
 3 Banco de dados MySQL Server Studio
+
 4 Git version 2.47.1.windows.1
 
 
 ## Como configurar o projeto
+
 Para realizar a inicialização do projeto, siga os seguintes procedimentos:
 
-1 Clonar o repositório (git clone https://github.com/raquel-sam/myfinance-web-dotnet.git)
+1 Clonar o repositório https://github.com/raquel-sam/myfinance-web-dotnet
 
 2 Instalar os programas descritos nas ferramentas
 
@@ -37,4 +41,4 @@ Para realizar a inicialização do projeto, siga os seguintes procedimentos:
 
 5 Executar o build e rodar
 
-6 O diagrama do projeto e demais documentações estão na pasta Docs
+6 O diagrama do projeto e demais documentações estão na pasta Docs (myfinance-web-dotnet\Docs)
