@@ -31,16 +31,8 @@ Para realizar a inicialização do projeto, siga os seguintes procedimentos:
 
 3 Executar o script de criação do banco de dados no MySql Server Management Studio (myfinance-web-dotnet\Docs\myfinance.sql);
 
-4 Injetar biblioteca mySQL no arquivo dotnet
-
-(```add package Pomelo.EntityFrameworkCore.MySql```)
-
-5 Injetar biblioteca do Entity no arquivo dotnet
-
-(```add package microsoft.entityframeworkcore.mysql```)
-
-6 No arquivo MyFinanceDbContext.cs, o nome do server na variável abaixo (@"Server=('NOME_SERVER')), deve ser alterado conforme está na configuração do seu MySQL Server Management Studio 
+4 No arquivo MyFinanceDbContext.cs, o nome do server na variável abaixo (@"Server=('NOME_SERVER')), deve ser alterado conforme está na configuração do seu MySQL Server Management Studio 
 
 ```var connectionString = @"Server=('NOME_SERVER');Database=myfinance;Trusted_Connection=True;TrustServerCertificate=True";```
 
-7 Executar o build e rodar
+5 Executar o build e rodar
