@@ -10,11 +10,11 @@ período, permitindo uma análise detalhada das finanças.
 Tela de Plano contas, com a função de visualização dos dados, criação de novo registro, edição exclusão.
 Tela de Transação, somente com a função de visualização dos dados. Os demais itens, como a edição e exclusão da tela de transação e relatórios não foram criados.
 
-## Arquitetura:
+## Arquitetura
 
 -MVC - Model View Controller
 
-## Ferramentas:
+## Ferramentas
 
 -ASP.NET MVC (dotnet version 8.0.404)
 -VSCode
@@ -36,3 +36,5 @@ Para realizar a inicialização do projeto, siga os seguintes procedimentos:
 ```var connectionString = @"Server=('NOME_SERVER');Database=myfinance;Trusted_Connection=True;TrustServerCertificate=True";```
 
 5 Executar o build e rodar
+
+6 O diagrama do projeto e demais documentações estão na pasta Docs
